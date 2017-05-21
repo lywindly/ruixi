@@ -1,0 +1,27 @@
+﻿<?php
+header("Content-type:text/html;charset=utf-8");
+$a = array
+(
+    0 => array
+        (
+            'initial' => 'A',
+            'typename' => '奥迪',
+        ),
+    1 => array
+        (
+            'initial' => 'F',
+            'typename' =>'F1',
+        ),
+    2 => array
+        (
+            'initial' => 'F',
+            'typename' => 'F2',
+        ),
+);
+ 
+$res = array();
+foreach($a as $k=>$v){
+    $res[$v['initial']][] = $v;  
+}
+
+print_r($res);
